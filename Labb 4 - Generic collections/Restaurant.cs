@@ -9,10 +9,12 @@ namespace Labb_4___Generic_collections
 {
     internal class Restaurant 
     {
+        int orderNumber = 1;
         // List<T> för att representera menyn
         public List<MenuItem> menu = new List<MenuItem>();
+
         // Ska använda Queue<T> för beställningar (av klassen Order)
-        Queue<Order> orders = new Queue<Order>();
+        public Queue<Order> orders = new Queue<Order>();
         // - AddtoMenu(MenuItem menuItem)`**: Lägger till en ny maträtt i menyn och loggar detta till konsolen.
         public void AddtoMenu(MenuItem menuItem)
         {
@@ -31,11 +33,40 @@ namespace Labb_4___Generic_collections
             }
         }
         // - CreateOrder(Order order)`**: Lägger till en ny beställning i kön och loggar detta till konsolen.
+        public void CreateOrder(Order order)
+        {
+            orders.Enqueue(order);
+            order.OrderNumber(order);
+        }
         // - HandleOrder(): Hanterar (tar bort) den första beställningen i kön och loggar detta till konsolen.
+        public void HandleOrder()
+        {
+            orders.Dequeue();
+            Console.WriteLine($"Order {orderNumber} är färdig");
+            orderNumber++;
+        }
         // - ShowOrders(): Skriver ut alla beställningar i kön till konsolen.
+        public void ShowOrders()
+        {
+            Console.WriteLine("Aktuella beställningar:");
+            foreach (Order order in orders)
+            {
+                order.WriteOrder();
+            }
+            Console.WriteLine();
+        }
         // - ShowNextOrder(): Skriver ut beställningen som är näst i kön till konsolen.
+        public void ShowNextOrder()
+        {
+            Console.WriteLine($"Nästa order i kön: ");
+            orders.Peek().WriteOrder();
+        }
         // - ShowOrderCount(): Skriver ut antalet beställningar i kön till konsolen.
-
-        // (Tips! Skapa en metod i Order-klassen som du kan kalla på för att skriva ut en beställning. Den kan du sedan använda i alla metoder som skriver ut en eller flera beställningar.)*/
+        public void ShowOrderCount()
+        {
+            Console.WriteLine($"Det är {orders.Count()} ordrar i kön\n");
+        }
+        // (Tips! Skapa en metod i Order-klassen som du kan kalla på för att skriva ut en beställning.
+        // Den kan du sedan använda i alla metoder som skriver ut en eller flera beställningar.)*/
     }
 }
