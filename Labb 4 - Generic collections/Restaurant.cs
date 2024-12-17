@@ -29,7 +29,7 @@ namespace Labb_4___Generic_collections
             Console.WriteLine("Meny:");
             foreach (MenuItem menuItem in menu)
             {
-                Console.WriteLine($"{menuItem.Id}. {menuItem.Name} - {menuItem.Price} kr");
+                Console.WriteLine($"{menuItem} kr");
             }
         }
         // - CreateOrder(Order order)`**: Lägger till en ny beställning i kön och loggar detta till konsolen.
