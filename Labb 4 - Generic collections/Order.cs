@@ -14,6 +14,7 @@ namespace Labb_4___Generic_collections
         private List<MenuItem> _orderItems;
         private int _tableNumber;
 
+        public int OrderId => _orderId;
         public Order(List<MenuItem> orderItems, int tableNumber)
         {
             // Automatiskt skapande av id

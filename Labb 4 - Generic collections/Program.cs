@@ -28,11 +28,11 @@
             // och lägg till dem i orderkön (du kan hitta på bordsnummer för beställningarna).
             List<MenuItem> orderMenu1 = new List<MenuItem>();
             orderMenu1.AddRange(new List<MenuItem> { menuItem1, menuItem2 });
-            Order order1 = new Order(orderMenu1, 2);
+            Order order1 = new Order(orderMenu1, 1);
 
             List<MenuItem> orderMenu2 = new List<MenuItem>();
             orderMenu2.AddRange(new List<MenuItem> { menuItem3, menuItem3, menuItem4 });
-            Order order2 = new Order(orderMenu2, 2);
+            Order order2 = new Order(orderMenu2, 5);
 
             List<MenuItem> orderMenu3 = new List<MenuItem>();
             orderMenu3.AddRange(new List<MenuItem> { menuItem2, menuItem4, menuItem1 });
@@ -63,7 +63,7 @@
             // 10. Lägg till en ny order.
             List<MenuItem> orderMenu4 = new List<MenuItem>();
             orderMenu4.AddRange(new List<MenuItem> { menuItem4, menuItem4, menuItem4, menuItem2 });
-            Order order4 = new Order(orderMenu4, 2);
+            Order order4 = new Order(orderMenu4, 4);
             restaurant.CreateOrder(order4);
 
             // 11. Visa antalet ordrar i kön.

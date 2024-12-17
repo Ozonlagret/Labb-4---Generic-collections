@@ -9,7 +9,7 @@ namespace Labb_4___Generic_collections
 {
     internal class Restaurant 
     {
-        int orderNumber = 1;
+        
         // List<T> för att representera menyn
         public List<MenuItem> menu = new List<MenuItem>();
 
@@ -41,9 +41,9 @@ namespace Labb_4___Generic_collections
         // - HandleOrder(): Hanterar (tar bort) den första beställningen i kön och loggar detta till konsolen.
         public void HandleOrder()
         {
+            Console.WriteLine($"Order {orders.First().OrderId} är färdig");
             orders.Dequeue();
-            Console.WriteLine($"Order {orderNumber} är färdig");
-            orderNumber++;
+            
         }
         // - ShowOrders(): Skriver ut alla beställningar i kön till konsolen.
         public void ShowOrders()
