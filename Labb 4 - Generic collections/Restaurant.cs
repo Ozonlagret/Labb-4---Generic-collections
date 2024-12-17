@@ -53,18 +53,19 @@ namespace Labb_4___Generic_collections
             {
                 order.WriteOrder();
             }
-            Console.WriteLine();
+            Console.WriteLine("---------------------------------");
         }
         // - ShowNextOrder(): Skriver ut beställningen som är näst i kön till konsolen.
         public void ShowNextOrder()
         {
             Console.WriteLine($"Nästa order i kön: ");
-            orders.Peek().WriteOrder();
+            orders.First().WriteOrder();
         }
         // - ShowOrderCount(): Skriver ut antalet beställningar i kön till konsolen.
         public void ShowOrderCount()
         {
-            Console.WriteLine($"Det är {orders.Count()} ordrar i kön\n");
+            Console.WriteLine($"Det är {orders.Count()} ordrar i kön");
+            Console.WriteLine("---------------------------------");
         }
         // (Tips! Skapa en metod i Order-klassen som du kan kalla på för att skriva ut en beställning.
         // Den kan du sedan använda i alla metoder som skriver ut en eller flera beställningar.)*/

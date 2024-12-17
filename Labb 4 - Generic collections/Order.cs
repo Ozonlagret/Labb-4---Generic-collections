@@ -27,7 +27,7 @@ namespace Labb_4___Generic_collections
         public void WriteOrder()
         {
             decimal sum = 0;
-            Console.WriteLine("Order " + _orderId + ":");
+            Console.WriteLine("\nOrder " + _orderId + ":");
             foreach (MenuItem menuItem in _orderItems)
             {
                 Console.WriteLine($"1 st {menuItem.Name}");
@@ -39,7 +39,7 @@ namespace Labb_4___Generic_collections
             }
             Console.WriteLine("Summa: " + sum + " kr");
 
-            Console.WriteLine($"Till bord nummer {_tableNumber}\n");
+            Console.Write($"Till bord nummer {_tableNumber}\n");
         }
 
         public void OrderNumber(Order order)
