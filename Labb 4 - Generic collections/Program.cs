@@ -17,7 +17,6 @@
             restaurant.AddtoMenu(menuItem2);
             restaurant.AddtoMenu(menuItem3);
             restaurant.AddtoMenu(menuItem4);
-
             Console.WriteLine("---------------------------------");
 
             // 3. Skriv ut menyn.
@@ -37,48 +36,27 @@
             List<MenuItem> orderMenu3 = new List<MenuItem> { menuItem2, menuItem4, menuItem1 };
             Order order3 = new Order(orderMenu3, 2);
             restaurant.CreateOrder(order3);
-
             Console.WriteLine("---------------------------------");
 
-            // 5. Visa alla aktuella ordrar.
-            
             restaurant.ShowOrders();
-
-            // 6. Visa antalet ordrar i kön.
             restaurant.ShowOrderCount();
-            
-
-            // 7. Visa nästa order på kö.
             restaurant.ShowNextOrder();
-
-            // 8. Hantera en order.
             Console.WriteLine();
             restaurant.HandleOrder();
-
-            // 9. Visa antalet ordrar i kön.
             restaurant.ShowOrderCount();
             
-
-            // 10. Lägg till en ny order.
             List<MenuItem> orderMenu4 = new List<MenuItem> { menuItem4, menuItem4, menuItem4, menuItem2 };
             Order order4 = new Order(orderMenu4, 4);
-            restaurant.CreateOrder(order4);
 
-            // 11. Visa antalet ordrar i kön.
+            restaurant.CreateOrder(order4);
             restaurant.ShowOrderCount();
-            // 12. Hantera två ordrar.
             restaurant.HandleOrder();
             restaurant.HandleOrder();
             Console.WriteLine();
-            // 13. Visa antalet ordrar i kön.
             restaurant.ShowOrderCount();
-            // 14. Visa nästa order på kö.
             restaurant.ShowNextOrder();
-            // 15. Hantera en order.
             restaurant.HandleOrder();
-            // 16. Visa antalet ordrar i kön.
             restaurant.ShowOrderCount();
-
         }
     }
 }
